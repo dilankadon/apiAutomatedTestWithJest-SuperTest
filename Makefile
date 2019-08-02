@@ -1,16 +1,17 @@
 help:
 	@echo "This file contains targets to support local development"
 
-# Build and run a standalone server of authservice with docker support for db, redis and mountebank
+# Build and run a standalone server of fake REST API with docker support
 standalone:
 	docker-compose down
 	docker-compose build standalone
 	docker-compose up -d standalone
 	
-# Startup performance testing support containers: influxdb & grafana
+# Startup performance testing support containers: standalone, influxdb & grafana
 perf-support: standalone
 	docker-compose up -d standalone influxdb grafana
 
+# Build and run k6 perfomace test
 perf-test:
 	docker-compose build k6
 	docker-compose run --rm k6	

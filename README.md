@@ -1,4 +1,4 @@
-# API Automated Testing using Jest & SuperTest
+# REST API Automated Testing using Jest & SuperTest
  Automated REST API testing framework using Supertest and Jest
 
 ## Json Server

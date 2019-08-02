@@ -1,7 +1,7 @@
 {
   "name": "apijestexamplewithk6",
   "version": "1.0.0",
-  "description": "API Verification for Typicode running locally",
+  "description": "REST API verification using SuperTest and Jest running locally",
   "scripts": {
     "start": "json-server data/data.json --port 3333",
     "test": "jest"
